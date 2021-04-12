@@ -6,7 +6,7 @@ https://www.screensaversplanet.com/
 
 # Screenshots
 
-![3D Pipes](screenshots/3dpipes.png)
+![3D Pipes](screenshots/3dpipes.png?thumbnail)
 ![Aurora](screenshots/aurora.png)
 ![badapple](screenshots/badapple.png)
 ![flurry](screenshots/flurry.png)
