@@ -1,0 +1,10 @@
+[Unit]
+Description=Screensaver
+
+[Service]
+User=pi
+Type=simple
+ExecStart=/bin/bash /home/pi/.3dpipes/3dpipes.sh
+
+[Install]
+WantedBy=multi-user.target
