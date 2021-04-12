@@ -10,5 +10,5 @@ Commands to controll the flurry screensaver service
 Reload service daemon     : sudo systemctl daemon-reload
 Verify service is running : sudo systemctl status flurry
 Enable on startup         : sudo systemctl enable flurry
-Start 3dpipes service     : sudo systemctl start flurry
-Stop 3dpipes service      : sudo systemctl stop flurry
+Start flurry service     : sudo systemctl start flurry
+Stop flurry service      : sudo systemctl stop flurry

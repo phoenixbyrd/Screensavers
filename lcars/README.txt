@@ -11,5 +11,5 @@ Commands to controll the lcars screensaver service
 Reload service daemon     : sudo systemctl daemon-reload
 Verify service is running : sudo systemctl status lcars
 Enable on startup         : sudo systemctl enable lcars
-Start 3dpipes service     : sudo systemctl start lcars
-Stop 3dpipes service      : sudo systemctl stop lcars
+Start lcars service     : sudo systemctl start lcars
+Stop lcars service      : sudo systemctl stop lcars

@@ -10,5 +10,5 @@ Commands to controll the badapple screensaver service
 Reload service daemon     : sudo systemctl daemon-reload
 Verify service is running : sudo systemctl status badapple
 Enable on startup         : sudo systemctl enable badapple
-Start 3dpipes service     : sudo systemctl start badapple
-Stop 3dpipes service      : sudo systemctl stop badapple
+Start badapple service     : sudo systemctl start badapple
+Stop badapple service      : sudo systemctl stop badapple

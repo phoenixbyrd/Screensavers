@@ -13,5 +13,5 @@ Commands to controll the starfield screensaver service
 Reload service daemon     : sudo systemctl daemon-reload
 Verify service is running : sudo systemctl status starfield
 Enable on startup         : sudo systemctl enable starfield
-Start 3dpipes service     : sudo systemctl start starfield
-Stop 3dpipes service      : sudo systemctl stop starfield
+Start starfield service     : sudo systemctl start starfield
+Stop starfield service      : sudo systemctl stop starfield
