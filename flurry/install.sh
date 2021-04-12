@@ -2,7 +2,7 @@
 #Install screensaver
 WINEARCH=win32 WINEPREFIX=/home/pi/.flurry winecfg
 cp flurry.scr /home/pi/.flurry/drive_c/windows/
-cp lcars.sh /home/pi/.flurry/
+cp flurry.sh /home/pi/.flurry/
 sudo cp flurry.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start flurry
