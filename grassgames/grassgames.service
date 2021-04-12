@@ -1,0 +1,10 @@
+[Unit]
+Description=Screensaver
+
+[Service]
+User=pi
+Type=simple
+ExecStart=/bin/bash /home/pi/.grassgames/grassgames.sh
+
+[Install]
+WantedBy=multi-user.target
