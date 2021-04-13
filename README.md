@@ -1,7 +1,7 @@
 # Screensavers for RPI4 / Twister OS
 This is a collection of windows screensavers and install scripts for installing them.
 
-Screensaver are saved to /home/pi/.screensavers
+Screensavers are saved to /home/pi/.screensavers
 
 Please stop running screensaver when installing a new one.
 
