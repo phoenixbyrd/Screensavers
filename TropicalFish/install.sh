@@ -1,15 +1,21 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.tropicfish winecfg
-cp tropicfish.scr /home/pi/.tropicfish/drive_c/windows/
-cp tropicfish.sh /home/pi/.tropicfish/
+cp tropicfish.scr /home/pi/.screensavers/drive_c/windows/
+cp tropicfish.sh /home/pi/.screensavers/
 sudo cp tropicfish.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start tropicfish
 sudo systemctl enable tropicfish
 
 #Display screensaver after install
-WINEPREFIX=~/.tropicfish wine '/home/pi/.tropicfish/drive_c/windows/tropicfish.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/tropicfish.scr' /s
 
 #Clear screen and print instructions
 clear

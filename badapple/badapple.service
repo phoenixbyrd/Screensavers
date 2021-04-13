@@ -4,7 +4,7 @@ Description=Screensaver
 [Service]
 User=pi
 Type=simple
-ExecStart=/bin/bash /home/pi/.badapple/badapple.sh
+ExecStart=/bin/bash /home/pi/.screensavers/badapple.sh
 
 [Install]
 WantedBy=multi-user.target

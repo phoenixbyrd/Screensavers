@@ -1,15 +1,21 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.fireplace winecfg
-cp fireplace.scr /home/pi/.fireplace/drive_c/windows/
-cp fireplace.sh /home/pi/.fireplace/
+cp fireplace.scr /home/pi/.screensavers/drive_c/windows/
+cp fireplace.sh /home/pi/.screensavers/
 sudo cp fireplace.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start fireplace
 sudo systemctl enable fireplace
 
 #Display screensaver after install
-WINEPREFIX=~/.fireplace wine '/home/pi/.fireplace/drive_c/windows/fireplace.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/fireplace.scr' /s
 
 #Clear screen and print instructions
 clear

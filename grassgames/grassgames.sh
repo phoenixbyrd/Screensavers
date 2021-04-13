@@ -6,7 +6,7 @@ IDLE_TIME=$((5*60*1000))
 
 # Sequence to execute when timeout triggers.
 trigger_cmd() {
-    WINEPREFIX=/home/pi/.grassgames wine '/home/pi/.grassgames/drive_c/windows/grassgames.scr' /s
+    WINEPREFIX=/home/pi/.screensavers wine '/home/pi/.screensavers/drive_c/windows/grassgames.scr' /s
 }
 
 sleep_time=$IDLE_TIME

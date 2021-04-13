@@ -1,16 +1,22 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.stickmen winecfg
-cp StickMen.scr /home/pi/.stickmen/drive_c/windows/system32
-cp StickMenSound.exe /home/pi/.stickmen/drive_c/windows/system32
-cp stickmen.sh /home/pi/.stickmen/
+cp StickMen.scr /home/pi/.screensavers/drive_c/windows/system32
+cp StickMenSound.exe /home/pi/.screensavers/drive_c/windows/system32
+cp stickmen.sh /home/pi/.screensavers/
 sudo cp stickmen.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start stickmen
 sudo systemctl enable stickmen
 
 #Display screensaver after install
-WINEPREFIX=~/.stickmen wine '/home/pi/.stickmen/drive_c/windows/system32/StickMen.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/system32/StickMen.scr' /s
 
 #Clear screen and print instructions
 clear

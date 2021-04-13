@@ -4,7 +4,7 @@ Description=Screensaver
 [Service]
 User=pi
 Type=simple
-ExecStart=/bin/bash /home/pi/.lcars/lcars.sh
+ExecStart=/bin/bash /home/pi/.screensavers/lcars.sh
 
 [Install]
 WantedBy=multi-user.target

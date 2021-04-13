@@ -1,15 +1,21 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.flurry winecfg
-cp flurry.scr /home/pi/.flurry/drive_c/windows/
-cp flurry.sh /home/pi/.flurry/
+cp flurry.scr /home/pi/.screensavers/drive_c/windows/
+cp flurry.sh /home/pi/.screensavers/
 sudo cp flurry.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start flurry
 sudo systemctl enable flurry
 
 #Display screensaver after install
-WINEPREFIX=~/.flurry wine '/home/pi/.flurry/drive_c/windows/flurry.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/flurry.scr' /s
 
 #Clear screen and print instructions
 clear

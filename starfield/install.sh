@@ -1,15 +1,21 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.starfield winecfg
-WINEPREFIX=~/.starfield wine starfield.exe
-cp starfield.sh /home/pi/.starfield/
+WINEPREFIX=~/.screensavers wine starfield.exe
+cp starfield.sh /home/pi/.screensavers/
 sudo cp starfield.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start starfield
 sudo systemctl enable starfield
 
 #Display screensaver after install
-WINEPREFIX=~/.starfield wine '/home/pi/.starfield/drive_c/Program Files/Starfield Screensaver/Starfield.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/Program Files/Starfield Screensaver/Starfield.scr' /s
 
 #Clear screen and print instructions
 clear

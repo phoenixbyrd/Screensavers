@@ -1,15 +1,21 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.badapple winecfg
-cp badapple.scr /home/pi/.badapple/drive_c/windows/
-cp badapple.sh /home/pi/.badapple/
+cp badapple.scr /home/pi/.screensavers/drive_c/windows/
+cp badapple.sh /home/pi/.screensavers/
 sudo cp badapple.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start badapple
 sudo systemctl enable badapple
 
 #Display screensaver after install
-WINEPREFIX=~/.badapple wine '/home/pi/.badapple/drive_c/windows/badapple.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/badapple.scr' /s
 
 #Clear screen and print instructions
 clear

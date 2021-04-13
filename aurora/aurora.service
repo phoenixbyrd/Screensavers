@@ -4,7 +4,7 @@ Description=Screensaver
 [Service]
 User=pi
 Type=simple
-ExecStart=/bin/bash /home/pi/.aurora/aurora.sh
+ExecStart=/bin/bash /home/pi/.screensavers/aurora.sh
 
 [Install]
 WantedBy=multi-user.target

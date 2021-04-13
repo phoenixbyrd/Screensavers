@@ -6,7 +6,7 @@ IDLE_TIME=$((5*60*1000))
 
 # Sequence to execute when timeout triggers.
 trigger_cmd() {
-    WINEPREFIX=~/.flurry wine '/home/pi/.flurry/drive_c/windows/flurry.scr' /s
+    WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/flurry.scr' /s
 }
 
 sleep_time=$IDLE_TIME

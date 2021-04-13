@@ -4,7 +4,7 @@ Description=Screensaver
 [Service]
 User=pi
 Type=simple
-ExecStart=/bin/bash /home/pi/.flurry/flurry.sh
+ExecStart=/bin/bash /home/pi/.screensavers/flurry.sh
 
 [Install]
 WantedBy=multi-user.target

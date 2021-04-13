@@ -1,15 +1,21 @@
 #!/bin/bash
+
+#Setup wine prefix
+dir=/home/pi/.screensavers
+if [[ ! -e $dir ]]; then
+	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+fi
+
 #Install screensaver
-WINEARCH=win32 WINEPREFIX=/home/pi/.grassgames winecfg
-cp grassgames.scr /home/pi/.grassgames/drive_c/windows/
-cp grassgames.sh /home/pi/.grassgames/
+cp grassgames.scr /home/pi/.screensavers/drive_c/windows/
+cp grassgames.sh /home/pi/.screensavers/
 sudo cp grassgames.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start grassgames
 sudo systemctl enable grassgames
 
 #Display screensaver after install
-WINEPREFIX=~/.grassgames wine '/home/pi/.grassgames/drive_c/windows/grassgames.scr' /s
+WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/grassgames.scr' /s
 
 #Clear screen and print instructions
 clear
