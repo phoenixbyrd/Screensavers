@@ -5,10 +5,10 @@ chmod +x install.sh
 
 When winecfg.exe window shows set Windows Version to Windows XP, click apply and then OK
 
-Commands to controll the flurry screensaver service
+Commands to controll the screensaver service
 
 Reload service daemon     : sudo systemctl daemon-reload
-Verify service is running : sudo systemctl status flurry
-Enable on startup         : sudo systemctl enable flurry
-Start flurry service     : sudo systemctl start flurry
-Stop flurry service      : sudo systemctl stop flurry
+Verify service is running : sudo systemctl status screensaver
+Enable on startup         : sudo systemctl enable screensaver
+Start flurry service     : sudo systemctl start screensaver
+Stop flurry service      : sudo systemctl stop screensaver

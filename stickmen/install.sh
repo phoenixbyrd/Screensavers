@@ -10,7 +10,7 @@ fi
 cp StickMen.scr /home/pi/.screensavers/drive_c/windows/system32
 cp StickMenSound.exe /home/pi/.screensavers/drive_c/windows/system32
 cp stickmen.sh /home/pi/.screensavers/
-sudo cp stickmen.service /etc/systemd/system
+sudo cp screensaver.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start stickmen
 sudo systemctl enable stickmen
@@ -21,7 +21,7 @@ WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/system32
 #Clear screen and print instructions
 clear
 echo "Reload service daemon: sudo systemctl daemon-reload"
-echo "Verify service is running: sudo systemctl status stickmen"
-echo "Enable on startup: sudo systemctl enable stickmen"
-echo "Start stickmen service: sudo systemctl start stickmen"
-echo "Stop stickmen service: sudo systemctl stop stickmen"
+echo "Verify service is running: sudo systemctl status screensaver"
+echo "Enable on startup: sudo systemctl enable screensaver"
+echo "Start stickmen service: sudo systemctl start screensaver"
+echo "Stop stickmen service: sudo systemctl stop screensaver"

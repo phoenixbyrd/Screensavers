@@ -5,10 +5,10 @@ chmod +x install.sh
 
 When winecfg.exe window shows set Windows Version to Windows XP, click apply and then OK
 
-Commands to controll the fireplace screensaver service
+Commands to controll the screensaver service
 
 Reload service daemon     : sudo systemctl daemon-reload
-Verify service is running : sudo systemctl status fireplace
-Enable on startup         : sudo systemctl enable fireplace
-Start 3dpipes service     : sudo systemctl start fireplace
-Stop 3dpipes service      : sudo systemctl stop fireplace
+Verify service is running : sudo systemctl status screensaver
+Enable on startup         : sudo systemctl enable screensaver
+Start 3dpipes service     : sudo systemctl start screensaver
+Stop 3dpipes service      : sudo systemctl stop screensaver

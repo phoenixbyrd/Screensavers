@@ -9,7 +9,7 @@ fi
 #Install screensaver
 cp 3DPipes.scr /home/pi/.screensavers/drive_c/windows/
 cp 3dpipes.sh /home/pi/.screensavers/
-sudo cp 3dpipes.service /etc/systemd/system
+sudo cp screensaver.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start 3dpipes
 sudo systemctl enable 3dpipes
@@ -20,7 +20,7 @@ WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/3DPipes.
 #Clear screen and print instructions
 clear
 echo "Reload service daemon: sudo systemctl daemon-reload"
-echo "Verify service is running: sudo systemctl status 3dpipes"
-echo "Enable on startup: sudo systemctl enable 3dpipes"
-echo "Start 3dpipes service: sudo systemctl start 3dpipes"
-echo "Stop 3dpipes service: sudo systemctl stop 3dpipes"
+echo "Verify service is running: sudo systemctl status screensaver"
+echo "Enable on startup: sudo systemctl enable screensaver"
+echo "Start 3dpipes service: sudo systemctl start screensaver"
+echo "Stop 3dpipes service: sudo systemctl stop screensaver"

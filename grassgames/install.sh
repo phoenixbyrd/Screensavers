@@ -9,7 +9,7 @@ fi
 #Install screensaver
 cp grassgames.scr /home/pi/.screensavers/drive_c/windows/
 cp grassgames.sh /home/pi/.screensavers/
-sudo cp grassgames.service /etc/systemd/system
+sudo cp screensaver.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start grassgames
 sudo systemctl enable grassgames

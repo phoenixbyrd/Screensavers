@@ -3,7 +3,7 @@ This is a collection of windows screensavers and install scripts for installing 
 
 Screensavers are saved to /home/pi/.screensavers
 
-Please stop running screensaver when installing a new one.
+To switch between screensavers please run the install script again for the screensaver you would like to use
 
 # Find more Screensavers Here
 https://www.screensaversplanet.com/
