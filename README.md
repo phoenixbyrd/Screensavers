@@ -8,16 +8,3 @@ To switch between screensavers please run the install script again for the scree
 # Find more Screensavers Here
 https://www.screensaversplanet.com/
 
-# Screenshots
-
-![3D Pipes](screenshots/3dpipes.png)
-![Aurora](screenshots/aurora.png)
-![badapple](screenshots/badapple.png)
-![fireplace](screenshots/fireplace.png)
-![flurry](screenshots/flurry.png)
-![grassgames](screenshots/grassgames.png)
-![lcars](screenshots/lcars.png)
-![starfield](screenshots/starfield.png)
-![stickmen](screenshots/stickmen.png)
-![tropicfish](screenshots/tropicfish.png)
-
