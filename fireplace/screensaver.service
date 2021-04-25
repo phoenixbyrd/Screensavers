@@ -2,9 +2,8 @@
 Description=Screensaver
 
 [Service]
-User=pi
 Type=simple
-ExecStart=/bin/bash "$HOME/.screensavers/screensaver.sh"
+ExecStart=/bin/bash /home/pi/.screensavers/screensaver.sh
 
 [Install]
 WantedBy=multi-user.target
