@@ -1,27 +1,34 @@
 #!/bin/bash
 
 #Setup wine prefix
-dir=/home/pi/.screensavers
+dir="$HOME/.screensavers"
 if [[ ! -e $dir ]]; then
-	WINEARCH=win32 WINEPREFIX=/home/pi/.screensavers winecfg	
+	WINEARCH=win32 WINEPREFIX="$HOME/.screensavers" winecfg	
+fi
+
+#Stop existing screensaver.service
+file=/etc/systemd/system/screensaver.service
+if [[ -f $file ]]; then
+	sudo systemctl stop screensaver	
 fi
 
 #Install screensaver
-cp RetroSciFi_Blue.scr /home/pi/.screensavers/drive_c/windows/
-cp RetroSciFi_Blue.sh /home/pi/.screensavers/
-cp *.TTF /home/pi/.screensavers/drive_c/windows/Fonts
+cp RetroSciFi_Blue.scr "$HOME/.screensavers/drive_c/windows/"
+cp Msvbvm60.dll "$HOME/.screensavers/drive_c/windows/"
+cp screensaver.sh "$HOME/.screensavers/"
+cp ./fonts/*.TTF "$HOME/.screensavers/drive_c/windows/Fonts"
 sudo cp screensaver.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start screensaver
 sudo systemctl enable screensaver
 
 #Display screensaver after install
-WINEPREFIX=~/.screensavers wine '/home/pi/.screensavers/drive_c/windows/RetroSciFi_Blue.scr' /s
+WINEPREFIX="$HOME/.screensavers" wine "$HOME/.screensavers/drive_c/windows/RetroSciFi_Blue.scr" /s
 
 #Clear screen and print instructions
 clear
-echo "Reload service daemon: sudo systemctl daemon-reload"
-echo "Verify service is running: sudo systemctl status screensaver"
-echo "Enable on startup: sudo systemctl enable screensaver"
-echo "Start 3dpipes service: sudo systemctl start screensaver"
-echo "Stop 3dpipes service: sudo systemctl stop screensaver"
+echo "Reload service daemon      : sudo systemctl daemon-reload"
+echo "Verify service is running  : sudo systemctl status screensaver"
+echo "Enable on startup          : sudo systemctl enable screensaver"
+echo "Start screensaver service  : sudo systemctl start screensaver"
+echo "Stop screensaver service   : sudo systemctl stop screensaver"
