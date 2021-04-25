@@ -1,4 +1,4 @@
-# Screensavers for exclusively for Twister OS
+# Screensavers exclusively for Twister OS
 This is a collection of windows screensavers and install scripts for enhancing the look and feel of Twister OS Windows styled themes.
 
 Screensavers are saved to /home/pi/.screensavers
