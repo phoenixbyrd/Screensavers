@@ -18,14 +18,14 @@ cp RetroSciFi.scr /home/pi/.screensavers/drive_c/windows/
 cp Msvbvm60.dll /home/pi/.screensavers/drive_c/windows/
 cp screensaver.sh /home/pi/.screensavers/
 chmod +x /home/pi/.screensavers/screensaver.sh
-cp ./fonts/*.TTF /home/pi/.screensavers/drive_c/windows/Fonts
+cp *.TTF /home/pi/.screensavers/drive_c/windows/Fonts
 sudo cp screensaver.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl start screensaver
 sudo systemctl enable screensaver
 
 #Display screensaver after install
-WINEPREFIX=/home/pi/.screensavers wine /home/pi/.screensavers/drive_c/windows/RetroSciFi.scr /s
+#WINEPREFIX=/home/pi/.screensavers wine /home/pi/.screensavers/drive_c/windows/#RetroSciFi.scr /s
 
 #Clear screen and print instructions
 clear
