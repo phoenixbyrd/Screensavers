@@ -2,6 +2,7 @@
 Description=Screensaver
 
 [Service]
+User=pi
 Type=simple
 ExecStart=/bin/bash "$HOME/.screensavers/screensaver.sh"
 
