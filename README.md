@@ -22,4 +22,4 @@ Enable on startup             : sudo systemctl enable screensaver
 Start screensaver service     : sudo systemctl start screensaver
 Stop screensaver service      : sudo systemctl stop screensaver
 
-![Screensavers GUI](screensavers.png)
+![Screensavers GUI](screensaversgui.png)
