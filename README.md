@@ -10,6 +10,8 @@ cp /home/pi/Screensavers/ScreensaversGUI.desktop /home/pi/.local/share/applicati
 
 ScreensaversGUI will now appear in Menu > Settings
 
+# First Run
+
 When winecfg.exe window shows set Windows Version to Windows XP, click apply and then OK
 
 # Commands for controlling the screensaver service
