@@ -1,9 +1,14 @@
-# Screensavers exclusively for Twister OS
+# Screensavers for Twister OS
 This is a collection of windows screensavers and install scripts for enhancing the look and feel of Twister OS Windows styled themes.
 
+When winecfg.exe window shows set Windows Version to Windows XP, click apply and then OK
 
-To switch between screensavers please run the install script for the screensaver you would like to use
+# Commands for controlling the screensaver service
 
-# Find more Screensavers Here
-https://www.screensaversplanet.com/
+Reload service daemon         : sudo systemctl daemon-reload
+Verify service is running     : sudo systemctl status screensaver
+Enable on startup             : sudo systemctl enable screensaver
+Start screensaver service     : sudo systemctl start screensaver
+Stop screensaver service      : sudo systemctl stop screensaver
 
+![Screensavers GUI](screensavers.png)
