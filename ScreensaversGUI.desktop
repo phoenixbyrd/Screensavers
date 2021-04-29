@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ScreensaversGUI
+Comment=GUI for Twister OS windows screensavers
+Exec=/home/pi/Screensavers/run.sh
+Icon=/home/pi/Screensavers/icon.png
+Path=/home/pi/Screensavers
+Terminal=false
+StartupNotify=false
+Categories=Settings;DesktopSettings;X-XFCE-SystemSettings;
