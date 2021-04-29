@@ -6,7 +6,9 @@ This is a collection of windows screensavers and install scripts for enhancing t
 Open terminal and run the following:
 
 git clone https://github.com/phoenixbyrd/Screensavers.git
+
 sudo pip3 install guizero
+
 cp /home/pi/Screensavers/ScreensaversGUI.desktop /home/pi/.local/share/applications
 
 ScreensaversGUI will now appear in Menu > Settings
