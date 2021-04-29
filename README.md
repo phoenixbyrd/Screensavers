@@ -8,6 +8,8 @@ Open terminal and run the following:
 git clone https://github.com/phoenixbyrd/Screensavers.git
 cp /home/pi/Screensavers/ScreensaversGUI.desktop /home/pi/.local/share/applications
 
+ScreensaversGUI will now appear in Menu > Settings
+
 When winecfg.exe window shows set Windows Version to Windows XP, click apply and then OK
 
 # Commands for controlling the screensaver service
