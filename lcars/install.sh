@@ -15,8 +15,9 @@ fi
 
 #Install screensaver
 if [ ! -f /home/pi/.screensavers/drive_c/windows/system32/System47.scr ]; then
-	WINEPREFIX=/home/pi/.screensavers wine system47\ v2.2_setup.exe
+	WINEPREFIX=/home/pi/.screensavers wine /home/pi/Screensavers/lcars/system47.exe
 fi
+
 cp /home/pi/Screensavers/lcars/screensaver.sh /home/pi/.screensavers/
 chmod +x /home/pi/.screensavers/screensaver.sh
 sudo cp /home/pi/Screensavers/lcars/screensaver.service /etc/systemd/system
