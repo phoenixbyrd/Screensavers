@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo systemctl disable screensaver
+sudo systemctl stop screensaver
