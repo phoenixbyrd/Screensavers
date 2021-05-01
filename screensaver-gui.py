@@ -113,13 +113,13 @@ button_setup = PushButton(mystify, text="Setup", align="left", command=lambda: s
 
 row8 = Box(app)
 Enable = Box(row8, align="left")
-button_install = PushButton(Enable, text="Start Screensaver", align="left", command=lambda: sub.call('./enable'))
+button_install = PushButton(Enable, text="Start Screensaver Service", align="left", command=lambda: sub.call('./enable'))
 
 space = Box(row8, align="left")
-picture2 = Picture(row8, image="./space.png", align="left", width=100, height=100)
+picture2 = Picture(row8, image="./space.png", align="left", width=200, height=100)
 
 disable = Box(row8, align="right")
-button_install = PushButton(disable, text="Stop Screensaver", align="left", command=lambda: sub.call('./disable'))
+button_install = PushButton(disable, text="Stop Screensaver Service", align="left", command=lambda: sub.call('./disable'))
 
 
 app.display()
