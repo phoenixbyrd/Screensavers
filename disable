@@ -1,3 +1,5 @@
 #!/bin/bash
 sudo systemctl disable screensaver
 sudo systemctl stop screensaver
+
+yad --window-icon=./icon.png --title="" --text-align=center --text="Screensaver Disabled!" --button=OK:0 --width=200

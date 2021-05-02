@@ -1,3 +1,5 @@
 #!/bin/bash
 sudo systemctl enable screensaver
 sudo systemctl start screensaver
+
+yad --window-icon=./icon.png --title="" --text-align=center --text="Screensaver Enabled!" --button=OK:0 --width=200

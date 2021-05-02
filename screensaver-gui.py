@@ -10,7 +10,8 @@ message3 = Text(app, text="Click install to switch between screensavers")
 message4 = Text(app, text="")
 message.text_size = 20
 
-window = Window(app, title = "No Setup Available.", height=50, width=300)
+window = Window(app, title = "", height=35, width=300)
+message = Text(window, text="No Setup Available.", )
 window.hide()
 
 row1 = Box(app)
